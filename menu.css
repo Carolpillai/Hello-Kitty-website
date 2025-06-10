@@ -1,0 +1,155 @@
+/* General Styles */
+  /* Header */
+  header {
+    background: #fff;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e6007e;
+  }
+  .logo img {
+    width: 50px;  /* Adjust size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #e6007e;
+  }
+  
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #fff0f6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Menu Header */
+.menu-header {
+    background: linear-gradient(90deg, #ff66b2, #ff85c2);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.menu-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-header p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Category Section */
+.menu-category {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.menu-category h2 {
+    color: #ff3385;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Menu Grid */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Menu Items */
+.menu-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.menu-item h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #ff3385;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Hover Effects */
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

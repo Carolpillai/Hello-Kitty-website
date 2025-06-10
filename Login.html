@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Kitty Login & Signup</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+      body {
+        font-family: "Pacifico", cursive;
+        background: url("https://i.pinimg.com/736x/8e/fe/4a/8efe4ae21ed69427f554ad412946f176.jpg")
+          no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        transition: background 1s ease-in-out;
+      }
+      .container {
+        width: 320px;
+        padding: 25px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out;
+        animation: bounceIn 1s;
+      }
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      h2 {
+        color: #ff4081;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      input {
+        width: calc(100% - 24px);
+        padding: 12px;
+        margin: 12px 0;
+        border: 2px solid #ff4081;
+        border-radius: 10px;
+        outline: none;
+        font-size: 16px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      button {
+        width: 100%;
+        padding: 12px;
+        background: #ff4081;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s, background 0.3s;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #ff0055;
+        transform: scale(1.05);
+      }
+      .toggle {
+        color: #ff4081;
+        cursor: pointer;
+        margin-top: 10px;
+        display: block;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="form-container">
+      <h2 id="form-title">Login</h2>
+
+      <!-- Login Form -->
+      <form action="login.php" method="POST" id="login-form">
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Signup Form (Initially Hidden) -->
+      <form action="signup.php" method="POST" id="signup-form" style="display: none">
+        <input type="text" name="first_name" placeholder="First Name" required />
+        <input type="text" name="last_name" placeholder="Last Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <span class="toggle" onclick="toggleForm()">Don't have an account? Sign up</span>
+    </div>
+
+    <script>
+      function toggleForm() {
+        let loginForm = document.getElementById("login-form");
+        let signupForm = document.getElementById("signup-form");
+        let title = document.getElementById("form-title");
+        let toggleText = document.querySelector(".toggle");
+
+        if (loginForm.style.display === "none") {
+          loginForm.style.display = "block";
+          signupForm.style.display = "none";
+          title.innerText = "Login";
+          toggleText.innerText = "Don't have an account? Sign up";
+        } else {
+          loginForm.style.display = "none";
+          signupForm.style.display = "block";
+          title.innerText = "Sign Up";
+          toggleText.innerText = "Already have an account? Login";
+        }
+      }
+    </script>
+  </body>
+</html>
