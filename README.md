@@ -25,19 +25,6 @@ Hello Kitty Grand Cafe is a static website inspired by the adorable Hello Kitty 
 
 ---
 
-## 📸 Screenshots
-
-### 🏠 Homepage  
-![Homepage Screenshot](e56bbdc6-57e7-4c05-b431-1de39fd82b91.png)
-
-### 📣 Events & Testimonials  
-![Events Screenshot](5ba7c40c-b399-48a2-8db8-ae3676762e9e.png)
-
-### 🍽️ Menu Section  
-![Menu Screenshot](52c838f8-b557-4898-a8a2-2255cd15b68f.png)
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript
